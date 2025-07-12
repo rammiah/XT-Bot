@@ -62,7 +62,7 @@ export async function processHomeTimeline(client: any, config: ProcessConfig = {
         logStep('1. 初始化配置');
         const [followingIds, timeThreshold] = await Promise.all([
             loadFollowingUsers(followingPath),
-            calculateTimeThreshold(24)
+            calculateTimeThreshold(4)
         ]);
         console.log('⏰ 时间阈值:', timeThreshold.format('YYYY-MM-DD HH:mm:ss'));
 
